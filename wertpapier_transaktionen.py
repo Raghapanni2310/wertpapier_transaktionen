@@ -17,6 +17,7 @@ excel_path = os.path.join(EXPORT_DIR, f"Wertpapieruebersicht_{year}.xlsx")
 # Option 2: local icon file: put 'icon.png' in the same folder and use page_icon="icon.png"
 st.set_page_config(page_title="Wertpapier Transaktionen", page_icon="📊", layout="wide")
 
+
 st.title("Wertpapier Transaktionen 📊")
 
 with st.form("transaktion_form"):
@@ -78,3 +79,4 @@ if os.path.exists(excel_path):
         st.error(f"❌ Fehler beim Laden der Daten: {e}")
 else:
     st.info("Noch keine Transaktionen erfasst.")
+
